@@ -1,5 +1,7 @@
 package br.com.techint.concessionaria.model;
 
+import java.time.LocalDateTime;
+
 public class Carro {
     
     private Long id;
@@ -9,4 +11,5 @@ public class Carro {
     private int anoDeFabricacao;
     private int kilometragem;
     private DocumentacaoCarro documentacao;
+    private LocalDateTime dataCadastro;
 }

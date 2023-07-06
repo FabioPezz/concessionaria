@@ -17,4 +17,14 @@ public class Cliente {
 
         this.celulares.add(new Celular(numero));
     }
+
+    public Cliente(String nomeCliente, List<Celular> celulares, String cpf, String cidade, Date dataCadastro) {
+        this.nomeCliente = nomeCliente;
+        this.celulares = celulares;
+        this.cpf = cpf;
+        this.cidade = cidade;
+        this.dataCadastro = dataCadastro;
+    }
+
+
 }
