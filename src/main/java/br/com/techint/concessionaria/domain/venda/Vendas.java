@@ -1,6 +1,10 @@
-package br.com.techint.concessionaria.model;
+package br.com.techint.concessionaria.domain.venda;
 
 import java.sql.Date;
+
+import br.com.techint.concessionaria.domain.carro.Carro;
+import br.com.techint.concessionaria.domain.pessoa.Cliente;
+import br.com.techint.concessionaria.domain.pessoa.Vendedor;
 
 public class Vendas {
     

@@ -1,4 +1,5 @@
-package br.com.techint.concessionaria.model;
+
+package br.com.techint.concessionaria.domain.carro;
 
 import java.time.LocalDateTime;
 

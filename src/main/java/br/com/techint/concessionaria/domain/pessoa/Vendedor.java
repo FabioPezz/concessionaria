@@ -1,4 +1,4 @@
-package br.com.techint.concessionaria.model;
+package br.com.techint.concessionaria.domain.pessoa;
 
 import java.util.Date;
 

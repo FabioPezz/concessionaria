@@ -1,4 +1,4 @@
-package br.com.techint.concessionaria.model;
+package br.com.techint.concessionaria.domain.pessoa;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -6,12 +6,42 @@ import java.util.List;
 
 public class Cliente {
     
+    public Cliente(String nomeCliente, String cpf, String cidade) {
+        this.nomeCliente = nomeCliente;
+        this.cpf = cpf;
+        this.cidade = cidade;
+    }
+
     public long id;
     public String nomeCliente;
     public List<Celular> celulares =new ArrayList<>();
     public String cpf;
     public String cidade;
     public Date dataCadastro;
+
+    public long getId() {
+        return id;
+    }
+
+    public String getNomeCliente() {
+        return nomeCliente;
+    }
+
+    public List<Celular> getCelulares() {
+        return celulares;
+    }
+
+    public String getCpf() {
+        return cpf;
+    }
+
+    public String getCidade() {
+        return cidade;
+    }
+
+    public Date getDataCadastro() {
+        return dataCadastro;
+    }
 
     public void adicionarCelular(String numero){
 
