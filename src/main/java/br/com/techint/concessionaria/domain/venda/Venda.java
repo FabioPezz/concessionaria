@@ -6,7 +6,7 @@ import br.com.techint.concessionaria.domain.carro.Carro;
 import br.com.techint.concessionaria.domain.pessoa.Cliente;
 import br.com.techint.concessionaria.domain.pessoa.Vendedor;
 
-public class Vendas {
+public class Venda {
     
     public Vendedor vendedor;
     public Cliente cliente;
@@ -14,7 +14,7 @@ public class Vendas {
     public Date dataVenda;
 
 
-    public Vendas(Vendedor vendedor, Cliente cliente, Carro carro) {
+    public Venda(Vendedor vendedor, Cliente cliente, Carro carro) {
         this.vendedor = vendedor;
         this.cliente = cliente;
         this.carro = carro;

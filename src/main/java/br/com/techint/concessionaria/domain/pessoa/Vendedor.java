@@ -9,4 +9,26 @@ public class Vendedor {
     public Celular celular;
     public String cpf;
     public Date dataContratacao;
+
+    public String senha;
+
+    public long getId() {
+        return id;
+    }
+
+    public String getNomeVendedor() {
+        return nomeVendedor;
+    }
+
+    public Celular getCelular() {
+        return celular;
+    }
+
+    public String getCpf() {
+        return cpf;
+    }
+
+    public Date getDataContratacao() {
+        return dataContratacao;
+    }
 }
