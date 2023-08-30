@@ -65,7 +65,7 @@ public class JdbcVendaRepository implements VendaRepository {
     @Override
     public List<Venda> ApresentarVendasPorVendedor(Vendedor vendedor) {
         try{
-            String sql = "SELECT * FROM VENDAS WHERE CLIENTE = ?";
+            String sql = "SELECT * FROM VENDAS WHERE VENDEDOR = ?";
             PreparedStatement ps = connection.prepareStatement(sql);
             ps.setLong(1,vendedor.getId());
             ps.execute();
