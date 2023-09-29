@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+import br.com.techint.concessionaria.infrastructure.Feign.CepRequest;
+
 public class Cliente {
     
     public Cliente(String nomeCliente, String cpf, String cidade) {
@@ -18,6 +20,7 @@ public class Cliente {
     public String cpf;
     public String cidade;
     public Date dataCadastro;
+    public CepRequest cep;
 
     public long getId() {
         return id;
