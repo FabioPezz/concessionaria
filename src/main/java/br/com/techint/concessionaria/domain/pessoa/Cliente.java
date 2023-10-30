@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-import br.com.techint.concessionaria.infrastructure.Feign.CepRequest;
+import br.com.techint.concessionaria.infrastructure.Feign.Cep.CepRequest;
 
 public class Cliente {
     

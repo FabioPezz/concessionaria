@@ -1,4 +1,4 @@
-package br.com.techint.concessionaria.infrastructure.Feign;
+package br.com.techint.concessionaria.infrastructure.Feign.Cep;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

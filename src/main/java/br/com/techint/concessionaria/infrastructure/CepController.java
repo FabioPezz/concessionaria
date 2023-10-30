@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import br.com.techint.concessionaria.infrastructure.Feign.CepRequest;
+import br.com.techint.concessionaria.infrastructure.Feign.Cep.CepRequest;
 import br.com.techint.concessionaria.service.CepService;
 import lombok.RequiredArgsConstructor;
 

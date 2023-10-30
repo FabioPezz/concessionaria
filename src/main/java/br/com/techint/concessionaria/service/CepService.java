@@ -2,9 +2,9 @@ package br.com.techint.concessionaria.service;
 
 import org.springframework.stereotype.Service;
 
-import br.com.techint.concessionaria.infrastructure.Feign.CepFeign;
-import br.com.techint.concessionaria.infrastructure.Feign.CepRequest;
-import br.com.techint.concessionaria.infrastructure.Feign.CepResponse;
+import br.com.techint.concessionaria.infrastructure.Feign.Cep.CepFeign;
+import br.com.techint.concessionaria.infrastructure.Feign.Cep.CepRequest;
+import br.com.techint.concessionaria.infrastructure.Feign.Cep.CepResponse;
 import lombok.AllArgsConstructor;
 
 @AllArgsConstructor
