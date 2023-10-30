@@ -36,8 +36,8 @@ public class Carro implements Serializable {
     @Column(name = "kilometragem", nullable = false)
     private int kilometragem;
 
-    @Column(name = "marca", nullable = true)
-    private DocumentacaoCarro documentacao;
+    @Column(name = "numero_doc", nullable = true)
+    private String documentacao;
 
     @Column(name = "data_cadastro", nullable = false)
     private LocalDateTime dataCadastro;
