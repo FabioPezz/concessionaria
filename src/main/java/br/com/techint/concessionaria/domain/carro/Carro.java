@@ -18,7 +18,7 @@ import lombok.NoArgsConstructor;
 public class Carro implements Serializable {
     
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
     @Column(name = "marca", nullable = false)
@@ -27,19 +27,19 @@ public class Carro implements Serializable {
     @Column(name = "modelo", nullable = false)
     private String modelo;
 
-    @Column(name = "cor", nullable = false)
+    @Column(name = "cor", nullable = true)
     private String cor;
 
     @Column(name = "ano_fabricacao", nullable = false)
     private int anoDeFabricacao;
 
-    @Column(name = "kilometragem", nullable = false)
+    @Column(name = "kilometragem", nullable = true)
     private int kilometragem;
 
     @Column(name = "numero_doc", nullable = true)
     private String documentacao;
 
-    @Column(name = "data_cadastro", nullable = false)
+    @Column(name = "data_cadastro", nullable = true)
     private LocalDateTime dataCadastro;
     
     
