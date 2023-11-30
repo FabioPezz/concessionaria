@@ -19,7 +19,7 @@ public class Carro implements Serializable {
     
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
+    private Long id_carro;
 
     @Column(name = "marca", nullable = false)
     private String marca;

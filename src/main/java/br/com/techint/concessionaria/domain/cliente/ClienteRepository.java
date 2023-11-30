@@ -1,4 +1,4 @@
-package br.com.techint.concessionaria.domain.pessoa;
+package br.com.techint.concessionaria.domain.cliente;
 
 import java.util.List;
 

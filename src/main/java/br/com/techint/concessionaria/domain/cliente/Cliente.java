@@ -1,9 +1,10 @@
-package br.com.techint.concessionaria.domain.pessoa;
+package br.com.techint.concessionaria.domain.cliente;
 
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+import br.com.techint.concessionaria.domain.celular.Celular;
 import br.com.techint.concessionaria.infrastructure.Feign.Cep.CepRequest;
 
 public class Cliente {

@@ -1,10 +1,8 @@
-package br.com.techint.concessionaria.infrastructure;
+package br.com.techint.concessionaria.domain.venda;
 
 import java.util.List;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -13,29 +11,24 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
 import br.com.techint.concessionaria.domain.carro.Carro;
-import br.com.techint.concessionaria.service.CarroService;
-import lombok.RequiredArgsConstructor;
 
 @RestController
-@RequestMapping("/carro")
-public class CarroController {
+@RequestMapping("/venda")
+public class VendaController {
     
-    @Autowired
-    private CarroService service;
-
-
+    private VendaService vendaService;
 
     @GetMapping("/listar")
-    public List<Carro> listarCarros(){
+    public List<Venda> listarVendas(){
 
-        return service.listarTodos();
+        return vendaService.ListarTodas();
     }
 
     @PostMapping("/cadastrar")
     @ResponseStatus(HttpStatus.CREATED)
-    public Carro adicionarCarro(@RequestBody Carro carro){
+    public Venda salvarVenda(@RequestBody Venda venda){
     
-        return service.adicionarCarro(carro);
+        return vendaService.adicionarVenda(venda);
 
     }
 

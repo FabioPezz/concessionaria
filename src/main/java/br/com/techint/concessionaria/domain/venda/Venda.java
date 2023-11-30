@@ -3,52 +3,40 @@ package br.com.techint.concessionaria.domain.venda;
 import java.sql.Date;
 
 import br.com.techint.concessionaria.domain.carro.Carro;
-import br.com.techint.concessionaria.domain.pessoa.Cliente;
-import br.com.techint.concessionaria.domain.pessoa.Vendedor;
+import br.com.techint.concessionaria.domain.cliente.Cliente;
+import br.com.techint.concessionaria.domain.vendedor.Vendedor;
 
-public class Venda {
+import java.io.Serializable;
+import java.time.LocalDateTime;
+import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Entity
+@Builder
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+@Table(name = "venda")
+public class Venda implements Serializable{
     
-    public Vendedor vendedor;
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    public Long id_venda;
+
+    @Column(name = "id_vendedor", nullable = false)
     public Long id_vendedor;
-    public Cliente cliente;
+
+    @Column(name = "id_cliente", nullable = false)
     public Long id_cliente;
-    public Carro carro;
+
+    @Column(name = "id_carro", nullable = false)
     public Long id_carro;
-    public Date dataVenda;
 
+    @Column(name = "data_venda", nullable = true)
+    public Date data_venda;
 
-    public Venda(Vendedor vendedor, Cliente cliente, Carro carro) {
-        this.vendedor = vendedor;
-        this.cliente = cliente;
-        this.carro = carro;
-    }
-
-
-    public Venda(Long id_vendedor, Long id_cliente, Long id_carro) {
-        
-        this.id_vendedor = vendedor.getId();
-        this.id_cliente = cliente.getId();
-        this.id_carro = carro.getId();
-    }
-
-
-    public Vendedor getVendedor() {
-        return vendedor;
-    }
-
-
-    public Cliente getCliente() {
-        return cliente;
-    }
-
-
-    public Carro getCarro() {
-        return carro;
-    }
-
-
-    public Date getDataVenda() {
-        return dataVenda;
-    }
 
 }
