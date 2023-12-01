@@ -1,64 +1,44 @@
 package br.com.techint.concessionaria.domain.cliente;
 
-import java.util.ArrayList;
 import java.util.Date;
-import java.util.List;
 
-import br.com.techint.concessionaria.domain.celular.Celular;
-import br.com.techint.concessionaria.infrastructure.Feign.Cep.CepRequest;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
+@Entity
+@Builder
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+@Table(name = "cliente")
 public class Cliente {
     
-    public Cliente(String nomeCliente, String cpf, String cidade) {
-        this.nomeCliente = nomeCliente;
-        this.cpf = cpf;
-        this.cidade = cidade;
-    }
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    public long id_cliente;
 
-    public long id;
+    @Column(name = "nome_cliente", nullable = false)
     public String nomeCliente;
-    public List<Celular> celulares =new ArrayList<>();
+
+    @Column(name = "id_celular", nullable = false)
+    public long celulares;
+
+    @Column(name = "cpf", nullable = false)
     public String cpf;
+
+    @Column(name = "id_endereco", nullable = false)
     public String cidade;
+
+    @Column(name = "data_cadastro", nullable = false)
     public Date dataCadastro;
-    public CepRequest cep;
-
-    public long getId() {
-        return id;
-    }
-
-    public String getNomeCliente() {
-        return nomeCliente;
-    }
-
-    public List<Celular> getCelulares() {
-        return celulares;
-    }
-
-    public String getCpf() {
-        return cpf;
-    }
-
-    public String getCidade() {
-        return cidade;
-    }
-
-    public Date getDataCadastro() {
-        return dataCadastro;
-    }
-
-    public void adicionarCelular(String numero){
-
-        this.celulares.add(new Celular(numero));
-    }
-
-    public Cliente(String nomeCliente, List<Celular> celulares, String cpf, String cidade, Date dataCadastro) {
-        this.nomeCliente = nomeCliente;
-        this.celulares = celulares;
-        this.cpf = cpf;
-        this.cidade = cidade;
-        this.dataCadastro = dataCadastro;
-    }
 
 
 }
