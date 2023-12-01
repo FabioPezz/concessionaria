@@ -1,8 +1,7 @@
-package br.com.techint.concessionaria.domain.celular;
+package br.com.techint.concessionaria.domain.endereco;
 
 import java.util.List;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -11,24 +10,25 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
+import br.com.techint.concessionaria.domain.vendedor.Vendedor;
 
 @RestController
-@RequestMapping("/celular")
-public class CelularController {
-    
-    public CelularService celularService;
+@RequestMapping(name = "/endereco")
+public class EnderecoController {
 
-    @GetMapping("/listar")
-    public List<Celular> listarCelular(){
+    private EnderecoService enderecoService;
 
-        return celularService.listarTodos();
+     @GetMapping("/listar")
+    public List<Endereco> listarEndereco(){
+
+        return enderecoService.ListarTodos();
     }
 
     @PostMapping("/cadastrar")
     @ResponseStatus(HttpStatus.CREATED)
-    public Celular adicionarCelular(@RequestBody Celular celular){
-    
-        return celularService.cadastrarCelular(celular);
+    public Endereco salvaEndereco(@RequestBody Endereco endereco){
 
+        return enderecoService.adicionarEndereco(endereco);
     }
+    
 }

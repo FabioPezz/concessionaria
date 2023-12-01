@@ -6,7 +6,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 public class CelularService {
     
-    @Autowired
     public CelularRepository celularRepository;
 
     public List<Celular> listarTodos(){

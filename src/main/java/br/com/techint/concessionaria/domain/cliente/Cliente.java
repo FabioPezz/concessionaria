@@ -1,5 +1,6 @@
 package br.com.techint.concessionaria.domain.cliente;
 
+import java.io.Serializable;
 import java.util.Date;
 
 import jakarta.persistence.Column;
@@ -19,7 +20,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Table(name = "cliente")
-public class Cliente {
+public class Cliente implements Serializable{
     
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
