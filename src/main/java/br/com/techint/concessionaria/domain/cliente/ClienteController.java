@@ -19,13 +19,13 @@ public class ClienteController {
     
     private ClienteService clienteService;
 
-     @GetMapping("/listar")
+     @GetMapping("/listarclientes")
     public List<Cliente> listarClientes(){
 
         return clienteService.ListarTodos();
     }
 
-    @PostMapping("/cadastrar")
+    @PostMapping("/cadastrarcliente")
     @ResponseStatus(HttpStatus.CREATED)
     public Cliente salvarCliente(@RequestBody Cliente cliente){
     

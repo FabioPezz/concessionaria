@@ -23,13 +23,13 @@ public class CarroController {
 
 
 
-    @GetMapping("/listar")
+    @GetMapping("/listarcarros")
     public List<Carro> listarCarros(){
 
         return service.listarTodos();
     }
 
-    @PostMapping("/cadastrar")
+    @PostMapping("/adicionarcarro")
     @ResponseStatus(HttpStatus.CREATED)
     public Carro adicionarCarro(@RequestBody Carro carro){
     

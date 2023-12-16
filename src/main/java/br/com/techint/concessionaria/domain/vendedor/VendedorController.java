@@ -18,15 +18,15 @@ public class VendedorController {
     
     private VendedorService vendedorService;
 
-    @GetMapping("/listar")
+    @GetMapping("/listarvendedores")
     public List<Vendedor> listarVendedores(){
 
         return vendedorService.ListarTodos();
     }
 
-    @PostMapping("/cadastrar")
+    @PostMapping("/cadastrarvendedor")
     @ResponseStatus(HttpStatus.CREATED)
-    public Vendedor salvaVendedor(@RequestBody Vendedor vendedor){
+    public Vendedor salvarVendedor(@RequestBody Vendedor vendedor){
 
         return vendedorService.adicionarVendedor(vendedor);
     }

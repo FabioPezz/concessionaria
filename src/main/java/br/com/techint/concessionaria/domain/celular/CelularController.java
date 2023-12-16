@@ -18,13 +18,13 @@ public class CelularController {
     
     public CelularService celularService;
 
-    @GetMapping("/listar")
+    @GetMapping("/listarcelular")
     public List<Celular> listarCelular(){
 
         return celularService.listarTodos();
     }
 
-    @PostMapping("/cadastrar")
+    @PostMapping("/adicionarcelular")
     @ResponseStatus(HttpStatus.CREATED)
     public Celular adicionarCelular(@RequestBody Celular celular){
     

@@ -18,13 +18,13 @@ public class VendaController {
     
     private VendaService vendaService;
 
-    @GetMapping("/listar")
+    @GetMapping("/listarvendas")
     public List<Venda> listarVendas(){
 
         return vendaService.ListarTodas();
     }
 
-    @PostMapping("/cadastrar")
+    @PostMapping("/salvarvenda")
     @ResponseStatus(HttpStatus.CREATED)
     public Venda salvarVenda(@RequestBody Venda venda){
     

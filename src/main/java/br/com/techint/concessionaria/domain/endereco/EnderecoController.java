@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
-import br.com.techint.concessionaria.domain.vendedor.Vendedor;
 
 @RestController
 @RequestMapping(name = "/endereco")
@@ -18,13 +17,13 @@ public class EnderecoController {
 
     private EnderecoService enderecoService;
 
-     @GetMapping("/listar")
+     @GetMapping("/listarendereco")
     public List<Endereco> listarEndereco(){
 
         return enderecoService.ListarTodos();
     }
 
-    @PostMapping("/cadastrar")
+    @PostMapping("/cadastrarendereco")
     @ResponseStatus(HttpStatus.CREATED)
     public Endereco salvaEndereco(@RequestBody Endereco endereco){
 
